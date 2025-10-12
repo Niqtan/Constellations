@@ -16,7 +16,9 @@ export default defineConfig({
         content: resolve(__dirname, 'src/content/content.ts')
       },
       output: {
-        dir: 'dist'
+        entryFileNames: `assets/[name].js`,
+        chunkFileNames: `assets/[name].js`,
+        assetFileNames: `assets/[name].ext`
       }
     }
   }
